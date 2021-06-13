@@ -1,0 +1,8 @@
+Discord: 
+  pip install discord.py
+  
+ Discord-together:
+  pip install discord-together
+  
+Asyncio:
+  pip install asyncio
