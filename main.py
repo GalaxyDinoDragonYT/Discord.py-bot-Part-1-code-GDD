@@ -8,19 +8,19 @@ import json
 
 prefix = "!" #What the bot's prefix is. If the prefix is ! then the help command would be !help
 
-moderators = 827475273138176071 #Name of the role that can use moderator commands. Case sensetive.
+moderators =  #Role ID for mods.
 
-clear_chat = 827475273138176071 #Name of the role that can clear chat. Case sensetive.
+clear_chat =  #Role ID for clear_chat perms.
 
-admins = 827475273138176071 #Name of the role that can use admin commands. Case sensetive.
+admins =  #Role ID for admins.
 
 client = commands.Bot(command_prefix=prefix, help_command=None)
 togetherControl = DiscordTogether(client)
 
-logsID = 853572017574903828
-logsID2 = 853575847603601428
+logsID = #Your logs channel 1 ID
+logsID2 = #Your logs channel 2 ID
 
-TOKEN = 'ODI3MjIxMjA1MTU2MzY0MzA4.YGX3yA.yjQlX6NW6-wCJt-j0N22WzhFmi0' #Your bot's token.
+TOKEN = '' #Your bot's token.
 
 #Rules, put \n for a new line, copy and paste your rules in.
 
@@ -31,8 +31,6 @@ Rules = '**__Rules__**\n '
 # filtered_words = ["cat", "dog"]  # put words you want deleted here
 
 logs_channel = client.get_channel(logsID)
-
-supportID = 829708466582061077
 
 ModMailTime = '120'
 
@@ -88,7 +86,6 @@ async def on_command_error(ctx, error):
         await ctx.message.delete()
     elif isinstance(error, commands.CommandInvokeError):
         await ctx.send("Command invoke error, I have messaged support to find the problem.")
-        #await support_channel.send(f'**{client.mention}**Invoke error, {ctx.mention}{ctx.id}')
         print(error)
     elif isinstance(error, commands.NoPrivateMessage):
         await ctx.send("You can't use that command in DMs.")
